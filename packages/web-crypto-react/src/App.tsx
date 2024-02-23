@@ -58,7 +58,7 @@ function App() {
   const isFundedAccount = !!kpr && accountInfo.isSuccess && accountInfo.data.amount > 1
   return (
     <>
-        <h1>WebCrpyto Wallet</h1>
+        <h1>WebCrypto Wallet</h1>
         {kpr && <h2>{kpr.id.toString()}</h2>}
         {txnResult && <h2>Confirmed: {txnResult['confirmed-round']}</h2>}
       {txnResult && <a target="_blank" href={`https://testnet.explorer.perawallet.app/tx/${txnResult.id}`}>View on Pera Explorer</a>}
@@ -70,6 +70,9 @@ function App() {
             <button disabled={!isFundedAccount || isWaiting} onClick={() => handlePaymentTxn()}>Make Payment</button>
             <button disabled={isWaiting} onClick={() => handleGenerateKey()}>Generate Key</button>
         </div>
+        <p>
+            Generate a wallet, then fund it using the dispenser. Once funded, you can make a payment.
+        </p>
     </>
   )
 }
