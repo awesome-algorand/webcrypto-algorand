@@ -1,0 +1,20 @@
+{
+  "name": "@algorandfoundation/webcrypto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "preinstall": "tsc",
+    "dev": "tsc -w"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "algosdk": "^2.7.0",
+    "js-sha512": "^0.9.0",
+    "tweetnacl": "^1.0.3"
+  }
+}
